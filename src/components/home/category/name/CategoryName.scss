@@ -1,0 +1,24 @@
+.CategoryName {
+  padding: 5px 16px;
+  border-radius: 10px;
+  background-color: var(--bg-blue-white);
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 19px;
+  color: var(--blue);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--bg-blue-white-hv);
+  }
+
+  &-all {
+    background-color: var(--bg-blue);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--bg-blue-hv);
+    }
+  }
+}

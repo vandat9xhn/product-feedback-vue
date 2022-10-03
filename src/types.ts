@@ -1,3 +1,5 @@
+import { PropType } from 'vue';
+
 //
 export interface User {
   id: number;
@@ -35,3 +37,9 @@ export interface Feedback {
   votes: Vote[];
   comments: Comment[];
 }
+
+// ------
+
+export const ArrNamesType = Array as PropType<string[]>;
+export type filterSuggestType = (name: string) => void;
+export const filterSuggestTypeProps = Function as PropType<filterSuggestType>;

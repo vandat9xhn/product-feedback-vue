@@ -1,0 +1,25 @@
+.HomeRoadMapStatus {
+  position: relative;
+  padding-left: 24px;
+  font-size: 16px;
+}
+
+.HomeRoadMapStatus_ball {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.HomeRoadMapStatus_title {
+  color: var(--gray-blue);
+}
+
+.HomeRoadMapStatus_count {
+  font-weight: 700;
+}

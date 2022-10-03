@@ -1,0 +1,24 @@
+.HomeHeading {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 24px;
+  border-radius: 10px;
+  background-image: linear-gradient(var(--linear-blue-purple));
+
+  color: var(--white);
+}
+
+.HomeHeading_title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: -0.25px;
+}
+
+.HomeHeading_text {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+}
