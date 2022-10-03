@@ -1,0 +1,53 @@
+//
+:root {
+  //
+  --bg-main: #f7f8fd;
+  --bg-blue: #4661e6;
+  --bg-blue-hv: #7c91f9;
+  --bg-blue-dark: #373f68;
+  --bg-blue-dark-hv: #656ea3;
+  --bg-blue-white: #f2f4ff;
+  --bg-blue-white-hv: #cfd7ff;
+  --bg-purple: #ad1fea;
+  --bg-purple-hv: #c75af6;
+  --bg-red: #d73737;
+  --bg-red-hv: #e98888;
+
+  //
+  --white: white;
+  --blue: #4661e6;
+  --dark: #3a4374;
+  --gray-blue: #647196;
+  --white-blue: #f2f4fe;
+  --error: #d73737;
+
+  //
+  --linear-blue-purple: (45deg, var(--bg-blue), var(--bg-purple));
+}
+
+// ---
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @font-face {
+    font-family: Jost;
+    src: url('http://fonts.cdnfonts.com/css/jost');
+  }
+
+  font-family: Jost;
+  color: var(--dark);
+  background-color: var(--bg-main);
+}
+
+input {
+  font-size: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
