@@ -14,13 +14,14 @@
   --bg-purple-hv: #c75af6;
   --bg-red: #d73737;
   --bg-red-hv: #e98888;
-
+  
   //
   --white: white;
   --blue: #4661e6;
   --dark: #3a4374;
   --gray-blue: #647196;
   --white-blue: #f2f4fe;
+  --purple: #ad1fea;
   --error: #d73737;
 
   //
@@ -54,6 +55,7 @@ input {
 
 a {
   color: inherit;
+  font: inherit;
   text-decoration: none;
 }
 
@@ -65,9 +67,25 @@ ul {
 
 button {
   border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+select {
+  color: inherit;
+  font: inherit;
 }
 
 // -----
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
 
 .flex {
   display: flex;
@@ -77,12 +95,36 @@ button {
   flex-wrap: wrap;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .space-between {
   justify-content: space-between;
 }
 
 .items-center {
   align-items: center;
+}
+.grow-1 {
+  flex-grow: 1;
+}
+
+// -----
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pos-abs-100per {
+  @extend .pos-abs-0;
+  @extend .wh-100per;
 }
 
 // -----
@@ -109,6 +151,6 @@ button {
 // ------ APP
 
 .App {
-  width: 1200px;
+  width: 1190px;
   margin: auto;
 }

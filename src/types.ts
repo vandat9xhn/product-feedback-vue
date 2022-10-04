@@ -38,8 +38,25 @@ export interface Feedback {
   comments: Comment[];
 }
 
+export interface Suggestion {
+  id: number;
+  user: User;
+  category: Category;
+  status: Status;
+
+  title: string;
+  detail: string;
+  count_vote: number;
+  count_comment: number;
+}
+
 // ------
 
-export const ArrNamesType = Array as PropType<string[]>;
+export const VoidFunction = Function as PropType<() => void>;
+
+// ------
 export type filterSuggestType = (name: string) => void;
+
+export const ArrNamesType = Array as PropType<string[]>;
 export const filterSuggestTypeProps = Function as PropType<filterSuggestType>;
+export const sortSuggestTypeProps = Function as PropType<filterSuggestType>;

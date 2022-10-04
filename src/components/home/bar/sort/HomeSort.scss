@@ -1,0 +1,42 @@
+.HomeSort {
+  position: relative;
+  user-select: none;
+}
+
+.HomeSort_title {
+  font-size: 14px;
+  color: var(--white-blue);
+  cursor: pointer;
+}
+
+.HomeSort_select {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 1;
+
+  width: 255px;
+  border-radius: 10px;
+  background-color: var(--bg-elm);
+  box-shadow: var(--box-shadow);
+
+  color: var(--gray-blue);
+  font-size: 16px;
+}
+
+.HomeSort_item {
+  padding: 12px 24px;
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(58, 67, 116, 0.15);
+  }
+
+  &:hover {
+    color: var(--purple);
+    cursor: pointer;
+  }
+
+  &-active {
+    color: var(--purple);
+    pointer-events: none;
+  }
+}

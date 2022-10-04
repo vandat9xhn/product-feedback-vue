@@ -1,0 +1,54 @@
+.SuggestItem {
+  padding: 28px 32px;
+  border-radius: 10px;
+  background-color: var(--bg-elm);
+  box-shadow: var(--box-shadow);
+}
+
+// ---
+
+.SuggestItem_left_contain {
+  padding: 14px;
+  border-radius: 10px;
+  background-color: var(--white-blue);
+  text-align: center;
+  font-size: 13px;
+}
+
+// .SuggestItem_count_vote {
+//   margin-top: 8px;
+// }
+
+// ---
+
+.SuggestItem_center {
+  margin: 0 40px;
+}
+
+.SuggestItem_title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.SuggestItem_detail {
+  margin-bottom: 12px;
+  color: var(--gray-blue);
+  font-size: 16px;
+}
+
+.SuggestItem_status_contain {
+  padding: 5px 16px;
+  border-radius: 10px;
+  background-color: var(--white-blue);
+
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+// ---
+
+.SuggestItem_count_comment{
+  margin-left: 8px;
+}

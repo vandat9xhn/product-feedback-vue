@@ -15,7 +15,20 @@
         </div>
       </div>
 
-      <div></div>
+      <div class="Home_right">
+        <div class="Home_part">
+          <HomeBar
+            :count="arr_suggest.length"
+            :openModalAddFeedback="openModalAddFeedback"
+            :sort_value="sort_value"
+            :sortSuggest="sortSuggest"
+          />
+        </div>
+
+        <div>
+          <HomeSuggestList :arr_suggest="arr_suggest" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -23,14 +36,25 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import HomeHeading from '../heading/HomeHeading.vue';
+import { DEFAULT_SUGGESTION } from '@/default/suggestion';
+import { Suggestion } from '@/types';
+import HomeBar from '../bar/_main/HomeBar.vue';
 import CategoryNames from '../category/names/CategoryNames.vue';
+import HomeHeading from '../heading/HomeHeading.vue';
 import HomeRoadMap from '../roadmap/_main/HomeRoadMap.vue';
-// import { filterSuggestType } from '@/types';
+import HomeSuggestList from '../suggest/list/HomeSuggestList.vue';
+import { ARR_SORT } from '@/components/data/suggestion';
 
+//
 export default defineComponent({
   name: 'Home',
-  components: { HomeHeading, CategoryNames, HomeRoadMap },
+  components: {
+    HomeHeading,
+    CategoryNames,
+    HomeRoadMap,
+    HomeBar,
+    HomeSuggestList,
+  },
   // props: {
 
   // },
@@ -39,13 +63,29 @@ export default defineComponent({
   data() {
     return {
       names: ['All', 'UI', 'UX', 'Enhancement', 'Bug', 'Feature'],
+      arr_suggest: [] as Suggestion[],
+      sort_value: ARR_SORT[0].title,
     };
   },
 
+  mounted() {
+    this.getDataSuggest();
+  },
+
   methods: {
+    async getDataSuggest() {
+      const new_arr_suggest: Suggestion[] = DEFAULT_SUGGESTION;
+      this.arr_suggest = new_arr_suggest;
+    },
+
     filterSuggest(name: string) {
       console.log(name);
     },
+    sortSuggest(_sort_value: string) {
+      this.sort_value = _sort_value
+    },
+
+    openModalAddFeedback() {},
   },
 });
 </script>

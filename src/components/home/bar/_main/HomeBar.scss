@@ -1,0 +1,32 @@
+.HomeBar{
+  padding: 14px 16px 14px 24px;
+  border-radius: 10px;
+  background-color: var(--bg-blue-dark);
+  color: var(--white);
+}
+
+.HomeBar_icon {
+  width: 23px;
+  height: 23px;
+}
+
+.HomeBar_title{
+  margin-right: 38px;
+  margin-left: 16px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.HomeBar_btn{
+  padding: 12px 24px;
+  border-radius: 10px;
+  background-color: var(--bg-purple);
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+
+  &:hover {
+    background-color: var(--bg-purple-hv);
+  }
+}
