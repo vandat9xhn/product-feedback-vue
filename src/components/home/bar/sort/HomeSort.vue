@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { ARR_SORT } from '@/components/data/suggestion';
+import { ARR_SORT } from '@/data/suggestion';
 import { sortSuggestTypeProps } from '@/types';
 import { defineComponent } from 'vue';
 

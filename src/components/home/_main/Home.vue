@@ -19,7 +19,6 @@
         <div class="Home_part">
           <HomeBar
             :count="arr_suggest.length"
-            :openModalAddFeedback="openModalAddFeedback"
             :sort_value="sort_value"
             :sortSuggest="sortSuggest"
           />
@@ -43,7 +42,7 @@ import CategoryNames from '../category/names/CategoryNames.vue';
 import HomeHeading from '../heading/HomeHeading.vue';
 import HomeRoadMap from '../roadmap/_main/HomeRoadMap.vue';
 import HomeSuggestList from '../suggest/list/HomeSuggestList.vue';
-import { ARR_SORT } from '@/components/data/suggestion';
+import { ARR_SORT, ARR_CATEGORY } from '@/data/suggestion';
 
 //
 export default defineComponent({
@@ -62,7 +61,7 @@ export default defineComponent({
   setup(props) {},
   data() {
     return {
-      names: ['All', 'UI', 'UX', 'Enhancement', 'Bug', 'Feature'],
+      names: ARR_CATEGORY,
       arr_suggest: [] as Suggestion[],
       sort_value: ARR_SORT[0].title,
     };
@@ -82,10 +81,8 @@ export default defineComponent({
       console.log(name);
     },
     sortSuggest(_sort_value: string) {
-      this.sort_value = _sort_value
+      this.sort_value = _sort_value;
     },
-
-    openModalAddFeedback() {},
   },
 });
 </script>

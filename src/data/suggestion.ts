@@ -5,3 +5,12 @@ export const ARR_SORT = [
   { name: 'most_comments', title: 'Most Comments' },
   { name: 'least_comments', title: 'Least Comments' },
 ];
+
+export const ARR_CATEGORY = [
+  'All',
+  'UI',
+  'UX',
+  'Enhancement',
+  'Bug',
+  'Feature',
+];

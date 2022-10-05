@@ -1,18 +1,31 @@
 <template>
-  <teleport to="app"></teleport>
+  <teleport to="#app">
+    <div class="Modal">
+      <div class="Modal_bg pos-abs-100per" @click="closeModal"></div>
+
+      <div class="pos-rel h-100per">
+        <slot></slot>
+      </div>
+    </div>
+  </teleport>
 </template>
 
-<style lang="scss">
-// --- modal
+<script lang="ts">
+import { VoidFunction } from '@/types';
+import { defineComponent } from 'vue';
 
-// --mb-part-modal: 24px;
-// --pd-modal: 52px 42px 40px;
-// --bg-modal: var(--white);
-// --bg-ip-modal: var(--bg-main);
-// --outline-ip-modal: var(--blue);
-// width: 100%;
-// padding: 12px 24px;
-// border-radius: 5px;
-// border: none;
-// padding: 12px 24px;
-</style>
+export default defineComponent({
+  name: 'Modal',
+  components: {},
+  props: {
+    closeModal: VoidFunction,
+  },
+
+  // setup(props) {},
+  //data() {
+  //return {};
+  //},
+});
+</script>
+
+<style lang="scss" src="./Modal.scss"></style>

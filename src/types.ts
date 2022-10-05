@@ -56,7 +56,19 @@ export const VoidFunction = Function as PropType<() => void>;
 
 // ------
 export type filterSuggestType = (name: string) => void;
+export type handleAddFeedbackType = ({
+  title,
+  detail,
+  name,
+}: {
+  title: string;
+  detail: string;
+  name: string;
+}) => void;
 
 export const ArrNamesType = Array as PropType<string[]>;
 export const filterSuggestTypeProps = Function as PropType<filterSuggestType>;
 export const sortSuggestTypeProps = Function as PropType<filterSuggestType>;
+
+export const handleAddFeedbackTypeProps =
+  Function as PropType<handleAddFeedbackType>;

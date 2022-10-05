@@ -1,0 +1,32 @@
+.ModalAddFeedback_plus {
+  position: absolute;
+  left: 42px;
+  top: 0;
+  transform: translateY(-50%);
+
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-image: linear-gradient(var(--linear-blue-purple));
+
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.ModalAddFeedback_cancel {
+  margin-right: 16px;
+  background-color: var(--bg-blue-dark);
+
+  &:hover {
+    background-color: var(--bg-blue-dark-hv);
+  }
+}
+
+.ModalAddFeedback_add {
+  background-color: var(--bg-purple);
+  &:hover {
+    background-color: var(--bg-purple-hv);
+  }
+}
