@@ -31,6 +31,20 @@ export interface Feedback {
   user: User;
   category: Category;
   status: Status;
+  color: string;
+
+  title: string;
+  detail: string;
+  count_vote: number;
+  count_comment: number;
+}
+
+export interface FeedbackDetail {
+  id: number;
+  user: User;
+  category: Category;
+  status: Status;
+  color: string;
 
   title: string;
   detail: string;
@@ -43,6 +57,7 @@ export interface Suggestion {
   user: User;
   category: Category;
   status: Status;
+  color: string;
 
   title: string;
   detail: string;
@@ -51,6 +66,11 @@ export interface Suggestion {
 }
 
 // ------
+
+export const getAPropsRequired = <T>(value: any) => ({
+  type: value as PropType<T>,
+  required: true as const,
+});
 
 export const VoidFunction = Function as PropType<() => void>;
 

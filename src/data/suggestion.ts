@@ -14,3 +14,9 @@ export const ARR_CATEGORY = [
   'Bug',
   'Feature',
 ];
+
+export const ARR_STATUS = [
+  { status: 'Planed', count: 1, color: '#f49f85' },
+  { status: 'In-Progress', count: 2, color: '#ad1fea' },
+  { status: 'Live', count: 0, color: '#62bcfa' },
+];

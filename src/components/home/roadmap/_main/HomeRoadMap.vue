@@ -29,6 +29,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import HomeRoadMapStatus from '../item/HomeRoadMapStatus.vue';
+import { ARR_STATUS } from '@/data/suggestion';
 
 export default defineComponent({
   name: 'HomeRoadMap',
@@ -38,11 +39,7 @@ export default defineComponent({
   // setup(props) {},
   data() {
     return {
-      statuses: [
-        { status: 'Planed', count: 1, color: '#f49f85' },
-        { status: 'In-Progress', count: 2, color: '#ad1fea' },
-        { status: 'Live', count: 0, color: '#62bcfa' },
-      ],
+      statuses: ARR_STATUS,
     };
   },
 });

@@ -12,7 +12,7 @@
           :count_comment="item.count_comment"
           :title="item.title"
           :detail="item.detail"
-          :status="item.status"
+          :category="item.category"
         />
       </li>
     </ul>

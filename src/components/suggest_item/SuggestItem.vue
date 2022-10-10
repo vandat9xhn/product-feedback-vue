@@ -24,9 +24,9 @@
         {{ detail }}
       </div>
 
-      <div class="SuggestItem_status flex">
-        <div class="SuggestItem_status_contain">
-          {{ status }}
+      <div class="SuggestItem_category flex">
+        <div class="SuggestItem_category_contain">
+          {{ category }}
         </div>
       </div>
     </div>
@@ -45,15 +45,16 @@
 import { defineComponent } from 'vue';
 import IconArrowUp from '@/icons/arrow_up/IconArrowUp.vue';
 import IconComment from '@/icons/comment/IconComment.vue';
+import { getAPropsRequired } from '@/types';
 
 export const SuggestItemProps = {
-  id: Number,
-  count_vote: Number,
-  count_comment: Number,
+  id: getAPropsRequired<number>(Number),
+  count_vote: getAPropsRequired<number>(Number),
+  count_comment: getAPropsRequired<number>(Number),
 
-  title: String,
-  detail: String,
-  status: String,
+  title: getAPropsRequired<string>(String),
+  detail: getAPropsRequired<string>(String),
+  category: getAPropsRequired<string>(String),
 };
 
 export default defineComponent({
