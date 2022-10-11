@@ -14,7 +14,7 @@
   --bg-purple-hv: #c75af6;
   --bg-red: #d73737;
   --bg-red-hv: #e98888;
-  
+
   //
   --white: white;
   --blue: #4661e6;
@@ -157,6 +157,80 @@ select {
 
 .box-shadow-elm {
   box-shadow: var(--box-shadow);
+}
+
+// ---------
+
+.modal_contain {
+  width: 540px;
+  height: 100%;
+  padding: 52px 42px 40px;
+  overflow-y: auto;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.modal_heading {
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35px;
+}
+
+.modal_part {
+  margin-bottom: 24px;
+}
+
+.modal_label {
+  font-weight: 700;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.modal_des {
+  color: var(--gray-blue);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.modal_ip {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-color: var(--bg-main);
+  outline: none;
+
+  line-height: 20px;
+  color: var(--dark);
+  font-size: 15px;
+
+  &:focus {
+    border-color: var(--blue);
+  }
+}
+
+.modal_option {
+  color: var(--dark);
+}
+
+.modal_btn {
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #f2f4fe;
+}
+
+.modal_btn-purple {
+  @extend .modal_btn;
+  background-color: var(--bg-purple);
+
+  &:hover {
+    background-color: var(--bg-purple-hv);
+  }
 }
 
 // ------ APP

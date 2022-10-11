@@ -1,15 +1,17 @@
 import { ARR_STATUS } from '@/data/suggestion';
-import { Suggestion } from '@/types';
+import { FeedbackDetail, Suggestion } from '@/types';
+
+export const DEFAULT_USER = {
+  id: 1,
+  name: 'Nguyen',
+  picture: '',
+  username: 'nguyen123',
+};
 
 export const DEFAULT_SUGGESTION: Suggestion[] = [
   {
     id: 1,
-    user: {
-      id: 1,
-      name: '',
-      picture: '',
-      username: '',
-    },
+    user: DEFAULT_USER,
     category: 'Bug',
     status: 'In-Progress',
     color: ARR_STATUS[1].color,
@@ -22,12 +24,7 @@ export const DEFAULT_SUGGESTION: Suggestion[] = [
   },
   {
     id: 2,
-    user: {
-      id: 1,
-      name: '',
-      picture: '',
-      username: '',
-    },
+    user: DEFAULT_USER,
     category: 'Enhancement',
     status: 'Planned',
     color: ARR_STATUS[0].color,
@@ -40,12 +37,7 @@ export const DEFAULT_SUGGESTION: Suggestion[] = [
   },
   {
     id: 3,
-    user: {
-      id: 1,
-      name: '',
-      picture: '',
-      username: '',
-    },
+    user: DEFAULT_USER,
     category: 'Enhancement',
     status: 'Live',
     color: ARR_STATUS[2].color,
@@ -58,12 +50,7 @@ export const DEFAULT_SUGGESTION: Suggestion[] = [
   },
   {
     id: 4,
-    user: {
-      id: 1,
-      name: '',
-      picture: '',
-      username: '',
-    },
+    user: DEFAULT_USER,
     category: 'Enhancement',
     status: 'Live',
     color: ARR_STATUS[2].color,
@@ -75,3 +62,58 @@ export const DEFAULT_SUGGESTION: Suggestion[] = [
     count_comment: 0,
   },
 ];
+
+export const DEFAULT_DETAIL: FeedbackDetail = {
+  id: 1,
+  user: DEFAULT_USER,
+  category: 'Bug',
+  status: 'In-Progress',
+  color: ARR_STATUS[1].color,
+
+  title: 'Title 1',
+  detail:
+    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto aliquam sit fugiat beatae voluptatum ',
+  comments: [
+    {
+      id: 1,
+      content: 'Content Comments',
+      user: DEFAULT_USER,
+      subs: [
+        {
+          id: 1,
+          content: 'Content Comments',
+          user: DEFAULT_USER,
+          user_reply: DEFAULT_USER.username,
+        },
+      ],
+    },
+    {
+      id: 2,
+      content: 'Content Comments',
+      user: DEFAULT_USER,
+      subs: [
+        {
+          id: 2,
+          content: 'Content Comments',
+          user: DEFAULT_USER,
+          user_reply: DEFAULT_USER.username,
+        },
+        {
+          id: 3,
+          content: 'Content Comments',
+          user: DEFAULT_USER,
+          user_reply: DEFAULT_USER.username,
+        },
+      ],
+    },
+    {
+      id: 3,
+      content: 'Content Comments',
+      user: DEFAULT_USER,
+      subs: [
+        
+      ],
+    },
+  ],
+  votes: [{ id_user: 1 }, { id_user: 2 }, { id_user: 3 }, { id_user: 4 }],
+};

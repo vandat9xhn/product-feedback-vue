@@ -92,3 +92,19 @@ export const sortSuggestTypeProps = Function as PropType<filterSuggestType>;
 
 export const handleAddFeedbackTypeProps =
   Function as PropType<handleAddFeedbackType>;
+
+//
+
+export type postReplyType = ({
+  username,
+  content,
+  id_cmt,
+}: {
+  username: string;
+  content: string;
+  id_cmt: number;
+}) => void;
+export type postCmtType = ({ content }: { content: string }) => void;
+
+export const postReplyTypeProps = getAPropsRequired<postReplyType>(Function);
+export const postCmtTypeProps = getAPropsRequired<postCmtType>(Function);

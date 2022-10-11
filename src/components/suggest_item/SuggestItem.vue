@@ -1,6 +1,7 @@
 <template>
   <div class="SuggestItem flex pos-rel">
     <router-link
+      v-if="has_link"
       class="SuggestItem_link display-block pos-abs-100per"
       :to="'/detail/' + id"
     ></router-link>
@@ -55,6 +56,11 @@ export const SuggestItemProps = {
   title: getAPropsRequired<string>(String),
   detail: getAPropsRequired<string>(String),
   category: getAPropsRequired<string>(String),
+
+  has_link: {
+    type: Boolean,
+    default: true,
+  },
 };
 
 export default defineComponent({

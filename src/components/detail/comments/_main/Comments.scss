@@ -1,0 +1,29 @@
+.Comments {
+  padding: 24px 32px;
+  border-radius: 10px;
+  background-color: var(--bg-elm);
+  box-shadow: var(--box-shadow);
+}
+
+.Comments_title {
+  margin-bottom: 28px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+//
+
+.Comments_subs {
+  padding-left: 70px;
+}
+
+.Comments_sub {
+  margin-top: 32px;
+}
+
+.Comments_cmt_hr {
+  margin: 32px 0;
+  height: 1px;
+  background-color: var(--gray-blue);
+  opacity: 0.25;
+}

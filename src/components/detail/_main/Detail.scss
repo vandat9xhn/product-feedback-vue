@@ -1,0 +1,29 @@
+.Detail {
+  margin: auto;
+  width: 730px;
+}
+
+.Detail_part {
+  margin-bottom: 24px;
+}
+
+.Detail_back {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray-blue);
+  cursor: pointer;
+}
+
+.Detail_edit {
+  padding: 12px 24px;
+  border-radius: 10px;
+  background-color: var(--bg-blue);
+
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  cursor: pointer;
+  &:hover {
+    background-color: var(--bg-blue-hv);
+  }
+}
